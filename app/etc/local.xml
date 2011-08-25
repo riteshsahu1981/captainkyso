@@ -44,6 +44,10 @@
                     <username><![CDATA[root]]></username>
                     <password><![CDATA[]]></password>
                     <dbname><![CDATA[captainkyso]]></dbname>
+
+					<!-- <username><![CDATA[infoinno_db]]></username>
+                    <password><![CDATA[password15]]></password>
+					<dbname><![CDATA[infoinno_captainkyso]]></dbname> -->
                     <active>1</active>
                 </connection>
             </default_setup>

@@ -1,0 +1,9 @@
+<?xml version ="1.0"?>
+<config>
+	<modules>
+		<Rks_Helloworld>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Rks_Helloworld>
+	</modules>
+</config>

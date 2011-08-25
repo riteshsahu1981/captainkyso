@@ -1,0 +1,15 @@
+<?php
+if (Mage::helper('engage')->isEngageEnabled()):
+$source = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") ? "https://" : "http://static.";
+$source .= "rpxnow.com/js/lib/rpx.js";
+?>
+<script type="text/javascript" src="<?php echo $source; ?>"></script>
+<script type="text/javascript">
+  RPXNOW.overlay = true;
+  RPXNOW.language_preference = 'en';
+  <?php if($appId = Mage::getStoreConfig('engage/vars/appid')): ?>
+  RPXNOW.init({appId: '<?php echo $appId; ?>',
+    xdReceiver: '<?php echo Mage::helper('engage')->_baseSkin(); ?>/rpx_xdcomm.html'});
+  <?php endif; ?>
+</script>
+<?php endif; ?>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <janrain translate="label">
+            <label>Janrain</label>
+            <sort_order>250</sort_order>
+        </janrain>
+    </tabs>
+    <sections>
+        <engage translate="label" module="engage">
+            <label>Engage</label>
+            <tab>janrain</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <options translate="label">
+                    <label>Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+                        <apikey translate="label">
+                            <label>Engage API key</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[Please enter your Engage API key.<br />Don't have one? <a href="http://www.janrain.com/products/engage/get-janrain-engage" target="_blank">Sign up here.</a>]]></comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </apikey>
+                    </fields>
+                </options>
+				<accountdata translate="label">
+                    <label>Account Info</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>engage/accountdata</frontend_model>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </accountdata>
+                <info translate="label">
+                    <label>About</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>engage/info</frontend_model>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>
+
+				<!-- Frame global uneditable config variables -->
+				<vars translate="label">
+					<label>Global Variables</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>50</sort_order>
+					<show_in_default>0</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<realm translate="label">
+                            <label>Realm</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>62</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </realm>
+						<realmscheme translate="label">
+                            <label>Realm Scheme</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>63</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </realmscheme>
+						<appid translate="label">
+                            <label>App Id</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>64</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </appid>
+						<adminurl translate="label">
+                            <label>Admin Url</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>65</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </adminurl>
+						<socialpub translate="label">
+                            <label>Social Pub</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>66</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </socialpub>
+						<enabled_providers translate="label">
+                            <label>Enabled Providers</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>67</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled_providers>
+						<apikey translate="label">
+                            <label>Engage API key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>68</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </apikey>
+					</fields>
+				</vars>
+            </groups>
+        </engage>
+    </sections>
+</config>

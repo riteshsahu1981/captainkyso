@@ -1,0 +1,87 @@
+<?php
+/**
+ * Create account form template
+ * Modified by Janrain Engage
+ *
+ * @see Mage_Customer_Block_Form_Register
+ */
+?>
+<div class="account-login">
+    <div class="page-title">
+        <h1><?php echo $this->__('Already have an account?') ?></h1>
+    </div>
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	<div class="col2-set">
+		<form action="<?php echo Mage::getUrl('engage/rpx/loginpost') ?>" method="post" id="login-form">
+			<div class="col-1 registered-users">
+				<div class="content">
+					<h2><?php echo $this->__('Use an Existing Account') ?></h2>
+					<p><?php echo $this->__('Enter your password to be able to log in using this provider in the future.') ?></p>
+					<ul class="form-list">
+						<li>
+							<label><?php echo $this->__('Email Address') ?></label>
+							<div class="input-box">
+								<strong><em><?php echo $this->htmlEscape($this->getUsername()) ?></em></strong>
+							</div>
+						</li>
+						<li>
+							<label for="pass" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+							<div class="input-box">
+								<input type="hidden" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo $this->__('Email Address') ?>" />
+								<input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>" />
+							</div>
+						</li>
+					</ul>
+					<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+				</div>
+				<div class="buttons-set">
+					<a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left"><?php echo $this->__('Forgot Your Password?') ?></a>
+					<button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
+				</div>
+			</div>
+		</form>
+		<form action="<?php echo Mage::getUrl('engage/rpx/createpost'); ?>" method="post" id="form-validate">
+			<div class="col-2 new-users">
+				<div class="content">
+					<h2><?php echo $this->__('Try Again') ?></h2>
+					<p><?php echo $this->__('If you would like to try another email address, please use the form below.') ?></p>
+					<ul class="form-list">
+						<li>
+							<label for="firstname" class="required"><em>*</em><?php echo $this->__('First Name') ?></label>
+							<div class="input-box">
+								<input type="text" name="firstname" value="<?php echo $this->htmlEscape($this->getFormData()->getFirstname()) ?>" id="firstname" class="input-text required-entry" title="<?php echo $this->__('First Name') ?>" />
+							</div>
+						</li>
+						<li>
+							<label for="lastname" class="required"><em>*</em><?php echo $this->__('Last Name') ?></label>
+							<div class="input-box">
+								<input type="text" name="lastname" value="<?php echo $this->htmlEscape($this->getFormData()->getLastname()) ?>" id="lastname" class="input-text required-entry" title="<?php echo $this->__('Last Name') ?>" />
+							</div>
+						</li>
+						<li>
+							<label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+							<div class="input-box">
+								<input type="text" name="email" id="email_address" value="<?php echo $this->htmlEscape($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
+								<?php
+									$password = md5('Janrain_Engage_' .  Mage::helper('engage')->rand_str(12));
+								?>
+								<input type="hidden" name="password" value="<?php echo $password; ?>" />
+								<input type="hidden" name="confirmation" value="<?php echo $password; ?>" />
+								<input type="hidden" name="success_url" value="<?php echo Mage::getSingleton('customer/session')->getBeforeAuthUrl(); ?>" />
+							</div>
+						</li>
+					</ul>
+					<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+				</div>
+				<div class="buttons-set">
+					<button type="submit" class="button" title="<?php echo $this->__('Submit') ?>" id="send"><span><span><?php echo $this->__('Submit') ?></span></span></button>
+				</div>
+			</div>
+		</form>
+	</div>
+    <script type="text/javascript">
+    //<![CDATA[
+        var dataForm = new VarienForm('login-form', true);
+    //]]>
+    </script>
+</div>
