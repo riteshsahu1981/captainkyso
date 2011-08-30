@@ -1,0 +1,9 @@
+<div class="nav-container">
+    <ul id="nav">
+        <li <?php if($this->getUrl('todays-tshirt')==$this->helper('core/url')->getCurrentUrl()){echo "class='active'";}?>><a href="<?php echo $this->getUrl('todays-tshirt')?>"><span>TODAY'S TSHIRT</span></a></li>
+        <li <?php if($this->getUrl('fifo')==$this->helper('core/url')->getCurrentUrl()){echo "class='active'";}?>><a href="<?php echo $this->getUrl('fifo')?>"><span>FIFO</span></a></li>
+        <li <?php if($this->getUrl('graveyard')==$this->helper('core/url')->getCurrentUrl()){echo "class='active'";}?>><a href="<?php echo $this->getUrl('graveyard')?>"><span>GRAVEYARD</span></a></li>
+        <li <?php if($this->getUrl('vote-design')==$this->helper('core/url')->getCurrentUrl()){echo "class='active'";}?>><a href="<?php echo $this->getUrl('vote-design')?>"><span>VOTE DESIGNS</span></a></li>
+        <li <?php if($this->getUrl('community')==$this->helper('core/url')->getCurrentUrl()){echo "class='active'";}?>><a href="<?php echo $this->getUrl('community')?>"><span>COMMUNITY</span></a></li>
+    </ul>
+</div>

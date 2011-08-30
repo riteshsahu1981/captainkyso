@@ -5,10 +5,13 @@
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
 	    </reference>
 
-		 <reference name="left" >
+         <reference name="left" >
 
 			<block before="left.newsletter" type = "helloworld/hello" name="helloworld.hello"  template="helloworld/hello.phtml" />
 
         </reference>
     </helloworld_index_hello>
+    
+  
+    
 </layout>

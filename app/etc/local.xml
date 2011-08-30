@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Wed, 10 Aug 2011 05:23:06 +0000]]></date>
+            <date><![CDATA[Mon, 29 Aug 2011 05:58:37 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[ef8b2aa4d5f9586b52df5e0031eaa63d]]></key>
+            <key><![CDATA[f3897aa5bb01cf8e480a22200efe1aad]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -43,11 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
                     <password><![CDATA[]]></password>
-                    <dbname><![CDATA[captainkyso]]></dbname>
-
-					<!-- <username><![CDATA[infoinno_db]]></username>
-                    <password><![CDATA[password15]]></password>
-					<dbname><![CDATA[infoinno_captainkyso]]></dbname> -->
+                    <dbname><![CDATA[captainkyso_new]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>

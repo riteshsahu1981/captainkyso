@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <captainkyso_index_hello>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+	    </reference>
+
+         <reference name="left" >
+
+			<block before="left.newsletter" type = "captainkyso/hello" name="captainkyso.hello"  template="captainkyso/hello.phtml" />
+
+        </reference>
+    </captainkyso_index_hello>
+    
+    <default>
+        <reference name="top.menu">
+            <remove name="catalog.topnav"/>
+            <block type = "captainkyso/top" name="captainkyso.top"  template="captainkyso/top.phtml" />
+        </reference>
+    </default>
+    
+</layout>

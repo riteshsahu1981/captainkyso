@@ -1,0 +1,39 @@
+<?xml version ="1.0"?>
+<config>
+	<modules>
+		<Rks_Captainkyso>
+			<version>0.1.0</version>
+		</Rks_Captainkyso>
+	</modules>
+
+	<frontend>
+		<routers>
+			<captainkyso>
+				<use>standard</use>
+				<args>
+				<module>Rks_Captainkyso</module>
+				<frontName>captainkyso</frontName>
+				</args>
+			</captainkyso>
+		</routers>
+
+<layout>
+	<updates>
+		<captainkyso>
+			<file>captainkyso.xml</file>
+		</captainkyso>
+	</updates>
+</layout>
+
+	</frontend>
+
+<global>
+	<blocks>
+		<captainkyso>
+			<class>Rks_Captainkyso_Block</class>
+		</captainkyso>
+	</blocks>
+</global>
+
+
+</config>
