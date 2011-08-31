@@ -14,9 +14,14 @@
     
     <default>
         <reference name="top.menu">
-            <remove name="catalog.topnav"/>
+            
             <block type = "captainkyso/top" name="captainkyso.top"  template="captainkyso/top.phtml" />
         </reference>
+        <remove name="catalog.topnav"/>
+        <remove name="footer_links"/>
+        <remove name="store_language"/>
+        
+        
     </default>
     
 </layout>

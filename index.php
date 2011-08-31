@@ -32,8 +32,9 @@ if (version_compare(phpversion(), '5.2.0', '<')===true) {
 /**
  * Error reporting
  */
-error_reporting(E_ALL | E_STRICT);
 
+error_reporting(E_ALL | E_STRICT);
+ini_set("memory_limit","512M");
 /**
  * Compilation includes configuration file
  */
