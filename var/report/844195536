@@ -1,0 +1,20 @@
+a:5:{i:0;s:99:"Invalid method Mage_Page_Block_Template_Links::removeLinkBlock(Array
+(
+    [0] => wishlist_link
+)
+)";i:1;s:2017:"#0 [internal function]: Varien_Object->__call('removeLinkBlock', Array)
+#1 [internal function]: Mage_Page_Block_Template_Links->removeLinkBlock('wishlist_link')
+#2 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Model\Layout.php(347): call_user_func_array(Array, Array)
+#3 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Model\Layout.php(213): Mage_Core_Model_Layout->_generateAction(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#4 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#5 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Controller\Varien\Action.php(345): Mage_Core_Model_Layout->generateBlocks()
+#6 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#7 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#8 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Controller\Varien\Action.php(420): Mage_Cms_IndexController->indexAction()
+#10 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 D:\xampplite\htdocs\captainkyso\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 D:\xampplite\htdocs\captainkyso\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 D:\xampplite\htdocs\captainkyso\index.php(80): Mage::run('', 'store')
+#15 {main}";s:3:"url";s:23:"/captainkyso/index.php/";s:11:"script_name";s:22:"/captainkyso/index.php";s:4:"skin";s:7:"default";}
