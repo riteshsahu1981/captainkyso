@@ -4,8 +4,8 @@ class Rks_Helloworld_IndexController extends Mage_Core_Controller_Front_Action{
 	public function indexAction()
 	{
 		echo "I am in Index action in Index Controller in Helloworld Module";
-		$this->loadLayout();
-		$this->renderLayout();
+		//$this->loadLayout();
+		//$this->renderLayout();
 	}
 
 	public function helloAction()

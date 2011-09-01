@@ -1,0 +1,70 @@
+<?php
+/*
+  *
+  *
+  */
+ ?>
+<?php if ($this->isWordpressSection()): ?>
+	<script type="text/javascript">
+		document.observe("dom:loaded", function() {
+			 function fishpig_CleanUrlForCompare(url) {
+				 if (url.charAt(url.length - 1) != '/') { 
+				 	url = url + '/';
+				 }
+				 
+				 return url;
+			 }
+
+			<?php if (Mage::getStoreConfigFlag('web/seo/use_rewrites')): ?>
+				var magentoBaseUrl = fishpig_CleanUrlForCompare('<?php echo Mage::getBaseUrl("web", false) ?>');
+			<?php else: ?>
+				var magentoBaseUrl = fishpig_CleanUrlForCompare('<?php echo Mage::getBaseUrl("link", false) ?>');
+			<?php endif; ?>
+
+			fishpig_CraftBlogUrl();
+			  
+			Event.observe('wordpress_integration_route', 'change', function () {
+				fishpig_CraftBlogUrl();
+			});
+
+			 function fishpig_CraftBlogUrl() {
+				var url = fishpig_CleanUrlForCompare(magentoBaseUrl + $('wordpress_integration_route').getValue().toString());
+	
+				$$('.wp-blog-url').each( function(item) {
+					item.innerHTML = url;
+				});
+			 }
+		});
+	</script>
+<?php endif; ?>
+<?php if ($this->isWordpressBlogSection()): ?>
+	<script type="text/javascript">
+
+		var buttonHtml = '<button type="button" id="generate-xml-sitemap" class="add scalable"><span><?php echo $this->__('Generate XML Sitemap') ?><\/span><\/button>';
+		var html = '<tr><td class="label">&nbsp;<\/td><td class="value">' + buttonHtml + '<\/td><td class="scope-label">&nbsp;<\/td><\/tr>';
+
+		function fishpig_wordpress_generate_xml_sitemap() {
+			confirmSetLocation('<?php echo $this->__('Any unsaved changes on this page will be lost. Are you sure you want to generate your XML sitemap?') ?>', '<?php echo $this->getUrl('wp_admin/adminhtml_sitemap/generate') ?>');
+		}
+		
+		document.observe("dom:loaded", function() {
+			$('wordpress_blog_xml_sitemap')
+				.select('table.form-list tbody')
+				.invoke('insert', {bottom: html});
+				
+			setTimeout(function() {
+				$('generate-xml-sitemap').observe('click', fishpig_wordpress_generate_xml_sitemap);
+			}, 500);
+		});
+
+	</script>
+<?php endif; ?>
+<?php if ($this->isWordpressSection() || $this->isWordpressBlogSection()): ?>
+	<script type="text/javascript">
+		document.observe('dom:loaded', function() { 
+			$$('.remove-parent').each(function(d) {
+				d.up('tr').remove();
+			});
+		});
+	</script>
+<?php endif; ?>

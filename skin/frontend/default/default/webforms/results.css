@@ -1,0 +1,14 @@
+.webforms-results-block{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #cccccc;
+}
+.webforms-results-row{
+	margin-bottom:5px;
+}
+.webforms-results-label{
+	font-weight: bold;
+}
+.webforms-results-text{
+	font-style: italic;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<widgets>
+	
+	<webforms_form type="webforms/form" translate="name description" module="webforms">
+		<name>Web-forms: Form</name>
+		<description type="desc">Adds web-form to a page</description>
+		<parameters>
+			<webform_id>
+				<label>Web-form</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>select</type>
+				<source_model>webforms/webforms</source_model>
+			</webform_id>
+			<template translate="label">
+				<label>Frontend Template</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>select</type>
+				<values>
+					<default translate="label">
+						<value>webforms/default.phtml</value>
+						<label>Default</label>
+					</default>
+					<legacy translate="label">
+						<value>webforms/legacy.phtml</value>
+						<label>Legacy</label>
+					</legacy>
+				</values>
+			</template>
+		</parameters>
+	</webforms_form>
+	
+	<webforms_results type="webforms/results" translate="name description" module="webforms">
+		<name>Web-forms: Results</name>
+		<description type="desc">Adds web-form collected results to a page</description>
+		<parameters>
+			<webform_id>
+				<label>Web-form</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>select</type>
+				<source_model>webforms/webforms</source_model>
+			</webform_id>
+			<page_size>
+				<label>Results per page</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>10</value>
+			</page_size>
+			<template translate="label">
+				<label>Frontend Template</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>select</type>
+				<values>
+					<default translate="label">
+						<value>webforms/results/default.phtml</value>
+						<label>Default</label>
+					</default>
+				</values>
+			</template>
+		</parameters>
+	</webforms_results>
+	
+</widgets>
